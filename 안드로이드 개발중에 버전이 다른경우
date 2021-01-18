@@ -1,0 +1,8 @@
+if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.M){
+    //버전이 다르다면 이렇게 처리하면 된다
+    String format= bundle.getString("format");		
+    messages[i]=SmsMessage.createFromPdu((byte[]) objs[i],format);
+}
+else{
+    messages[i]=SmsMessage.createFromPdu((byte[]) objs[i]);
+}
